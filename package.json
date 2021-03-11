@@ -1,0 +1,28 @@
+{
+  "name": "gmail-creator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "delay": "^4.4.0",
+    "express": "^4.17.1",
+    "figlet": "^1.5.0",
+    "fs-extra": "^9.1.0",
+    "is-online": "^9.0.0",
+    "node-fetch": "^2.6.1",
+    "node-random-name": "^1.0.1",
+    "node-telegram-bot-api": "^0.51.0",
+    "puppeteer": "^5.5.0",
+    "puppeteer-extra": "^3.1.15",
+    "puppeteer-extra-plugin-adblocker": "^2.11.10",
+    "puppeteer-extra-plugin-user-preferences": "^2.2.11",
+    "puppeteer-extra-plugin-stealth": "^2.7.5",
+    "random": "^2.2.0",
+    "readline-sync": "^1.4.10"
+  }
+}
