@@ -1,3 +1,4 @@
+process.env.NTBA_FIX_319 = 1;
 const TelegramBot = require('node-telegram-bot-api');
 const express = require('express');
 const app = express()
@@ -9,8 +10,8 @@ let chatId = "ISI CHAT ID DISINI"
 
 app.get('/gmail/no', async (req, res) => {
     await bot.sendMessage(chatId, 'Request No Hp')
-    bot.onText(/\/no (.+)/, async (msg, match) => {
-        const resp = match[1]
+    bot.onText(/\d+/, async (msg, match) => {
+        const resp = match[0]
         try {
             res.json({
                 no: resp
@@ -23,8 +24,8 @@ app.get('/gmail/no', async (req, res) => {
 app.get('/gmail/otp/:nohp', async (req, res) => {
     const nohp = req.params.nohp
     await bot.sendMessage(chatId, `Request OTP => ${nohp}`)
-    bot.onText(/\/o (.+)/, async (msg, match) => {
-        const resp = match[1]
+    bot.onText(/\d+/, async (msg, match) => {
+        const resp = match[0]
         try {
             res.json({
                 otp: resp
@@ -43,4 +44,6 @@ app.get('/gmail/success/:email/:success', async (req, res) => {
     })
 })
 
-app.listen(3000)
+app.listen(3000, (err ,res) => {
+	console.log('[+] Tele Bot On')
+})
