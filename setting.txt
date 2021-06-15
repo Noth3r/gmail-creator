@@ -1,6 +1,6 @@
 {
     "browser": "C:/Program Files/BraveSoftware/Brave-Browser/Application/brave.exe",
-    "changeip": true,
+    "changeip": false,
     "ipmodem": "192.168.8.1",
     "username": "admin",
     "password": "admin"
